@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TinyLibrary
 {
-    public partial class Form1 : Form
+    public partial class AddNewBook : Form
     {
-        public Form1()
+        public AddNewBook()
         {
             InitializeComponent();
         }
@@ -21,5 +21,16 @@ namespace TinyLibrary
         {
             Close();
         }
+
+        private void submitButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void AddNewBook_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

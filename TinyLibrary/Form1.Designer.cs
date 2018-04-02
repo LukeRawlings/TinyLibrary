@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // closeButton
+            // 
+            this.closeButton.Location = new System.Drawing.Point(529, 424);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(129, 54);
+            this.closeButton.TabIndex = 0;
+            this.closeButton.Text = "&Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 487);
+            this.ClientSize = new System.Drawing.Size(737, 517);
+            this.Controls.Add(this.closeButton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -42,6 +54,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button closeButton;
     }
 }
 
