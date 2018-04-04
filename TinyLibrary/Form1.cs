@@ -21,5 +21,11 @@ namespace TinyLibrary
         {
             Close();
         }
+
+        private void addBookButton_Click(object sender, EventArgs e)
+        {
+            AddNewBook form = new AddNewBook();
+            form.ShowDialog();
+        }
     }
 }

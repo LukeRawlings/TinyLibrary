@@ -10,7 +10,7 @@ namespace TinyLibrary.Models
     {
         public string ISBN { get; set; }
         public string Title { get; set; }
-        public Author Author { get; set; }
+        public List<Author> BookAuthors { get; set; }
         public string Location { get; set; }
         public int Count { get; set; }
 

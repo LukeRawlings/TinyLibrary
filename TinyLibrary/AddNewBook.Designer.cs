@@ -45,8 +45,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -201,6 +201,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Authors";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(120, 267);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 56);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Add to Book";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.checkBox1);
@@ -218,15 +227,6 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Book";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(120, 267);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 56);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Add to Book";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
