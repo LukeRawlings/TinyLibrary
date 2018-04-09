@@ -10,9 +10,11 @@ namespace TinyLibrary.Models
     {
         public string ISBN { get; set; }
         public string Title { get; set; }
-        public List<Author> BookAuthors { get; set; }
+        public List<Author> BookAuthors { get; set; } = new List<Author>();
         public string Location { get; set; }
         public int Count { get; set; }
+
+
 
 
     }

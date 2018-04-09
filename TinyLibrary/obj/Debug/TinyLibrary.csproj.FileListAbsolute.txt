@@ -9,3 +9,14 @@ C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\TinyLibrary\obj\Debu
 C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.exe
 C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.pdb
+C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\bin\Debug\TinyLibrary.exe.config
+C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\bin\Debug\TinyLibrary.exe
+C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\bin\Debug\TinyLibrary.pdb
+C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.AddNewBook.resources
+C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.Form1.resources
+C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.Properties.Resources.resources
+C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.csproj.GenerateResource.Cache
+C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.exe
+C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.pdb
