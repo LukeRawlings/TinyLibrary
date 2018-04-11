@@ -1,6 +1,6 @@
 ﻿namespace TinyLibrary
 {
-    partial class AddNewBook
+    partial class AddNewBookForm
     {
         /// <summary>
         /// Required designer variable.

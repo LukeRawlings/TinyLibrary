@@ -63,6 +63,7 @@
     <Compile Include="MatchesForm.Designer.cs">
       <DependentUpon>MatchesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MatchingAuthorsData.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\ModelRepository.cs" />

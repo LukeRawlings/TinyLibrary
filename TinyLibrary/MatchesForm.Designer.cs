@@ -31,7 +31,7 @@
             this.authorBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.selectAuthorButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // authorBox
@@ -46,7 +46,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 24);
+            this.label1.Location = new System.Drawing.Point(90, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(288, 20);
             this.label1.TabIndex = 1;
@@ -54,29 +54,30 @@
             // 
             // selectAuthorButton
             // 
-            this.selectAuthorButton.Location = new System.Drawing.Point(417, 39);
+            this.selectAuthorButton.Location = new System.Drawing.Point(480, 115);
             this.selectAuthorButton.Name = "selectAuthorButton";
-            this.selectAuthorButton.Size = new System.Drawing.Size(124, 42);
+            this.selectAuthorButton.Size = new System.Drawing.Size(152, 42);
             this.selectAuthorButton.TabIndex = 2;
-            this.selectAuthorButton.Text = "&Select";
+            this.selectAuthorButton.Text = "&This is my Author";
             this.selectAuthorButton.UseVisualStyleBackColor = true;
-            this.selectAuthorButton.Click += new System.EventHandler(this.button1_Click);
+            this.selectAuthorButton.Click += new System.EventHandler(this.selectAuthorButton_Click);
             // 
-            // button2
+            // cancelButton
             // 
-            this.button2.Location = new System.Drawing.Point(406, 387);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 42);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "&Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cancelButton.Location = new System.Drawing.Point(406, 387);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(183, 42);
+            this.cancelButton.TabIndex = 3;
+            this.cancelButton.Text = "&My Author is not here";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // MatchesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 473);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.selectAuthorButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.authorBox);
@@ -93,6 +94,6 @@
         private System.Windows.Forms.ListBox authorBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button selectAuthorButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button cancelButton;
     }
 }

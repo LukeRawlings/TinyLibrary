@@ -11,12 +11,12 @@ using TinyLibrary.Models;
 
 namespace TinyLibrary
 {
-    public partial class AddNewBook : Form
+    public partial class AddNewBookForm : Form
     {
         ModelRepository repo = new ModelRepository();
         Book book = new Book();
 
-        public AddNewBook()
+        public AddNewBookForm()
         {
             InitializeComponent();
             
@@ -43,7 +43,6 @@ namespace TinyLibrary
             {
                 Author author = MakeAuthor();
                 CheckForExistingAuthor(author);
-                AddAuthorToBook(author);
             }
         }
 
@@ -52,20 +51,30 @@ namespace TinyLibrary
             var possibleMatches = repo.Authors.Where
                 (a => author.FirstName == a.FirstName 
                 && author.LastName == a.LastName);
-            DisplayPossibleMatches(possibleMatches);
+            if (possibleMatches.ToList().Count > 0)
+                DisplayPossibleMatches(possibleMatches, author);
+            else
+                AddAuthorToBook(author);
         }
 
-        private void DisplayPossibleMatches(IEnumerable<Author> possibleMatches)
+        private void DisplayPossibleMatches(IEnumerable<Author> possibleMatches, Author author)
         {
-            MatchesForm form = new MatchesForm(possibleMatches);
+            MatchingAuthorsData data = new MatchingAuthorsData
+            {
+                AddNewBookForm = this,
+                PossibleMatches = possibleMatches,
+                Book = book,
+                InputtedAuthor = author
+            };
+            
+            MatchesForm form = new MatchesForm(data);
             form.ShowDialog();
         }
 
-        private void AddAuthorToBook(Author author)
+        public void AddAuthorToBook(Author author)
         {
             book.BookAuthors.Add(author);
             authorBox.Items.Add(author);
-
         }
 
         private bool AuthorInputsAreValid()

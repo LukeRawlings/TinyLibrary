@@ -13,13 +13,18 @@ namespace TinyLibrary
 {
     public partial class MatchesForm : Form
     {
+        AddNewBookForm addNewBookForm;
+        Author inputtedAuthor;
+        Book book;
         IEnumerable<Author> authors;
 
-        public MatchesForm(IEnumerable<Author> possibleMatches)
+        public MatchesForm(MatchingAuthorsData data)
         {
             InitializeComponent();
-            authors = possibleMatches;
-
+            addNewBookForm = data.AddNewBookForm;
+            inputtedAuthor = data.InputtedAuthor;
+            authors = data.PossibleMatches;
+            book = data.Book;
         }
 
         private void MatchesForm_Load(object sender, EventArgs e)
@@ -30,9 +35,18 @@ namespace TinyLibrary
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void selectAuthorButton_Click(object sender, EventArgs e)
         {
+            Author author = (Author)authorBox.SelectedItem;
+            addNewBookForm.AddAuthorToBook(author);
+            Close();
+        }
 
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            inputtedAuthor.IsNew = true;
+            addNewBookForm.AddAuthorToBook(inputtedAuthor);
+            Close();
         }
     }
 }
