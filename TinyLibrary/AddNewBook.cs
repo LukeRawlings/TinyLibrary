@@ -29,7 +29,12 @@ namespace TinyLibrary
 
         private void submitButton_Click(object sender, EventArgs e)
         {
-            
+            foreach(object obj in authorBox.Items)
+            {
+                Author author = (Author)obj;
+                author.AddedToCurrentBook = false;
+
+            }
         }
 
         private void AddNewBook_Load(object sender, EventArgs e)
@@ -53,8 +58,17 @@ namespace TinyLibrary
                 && author.LastName == a.LastName);
             if (possibleMatches.ToList().Count > 0)
                 DisplayPossibleMatches(possibleMatches, author);
-            else
-                AddAuthorToBook(author);
+             else if(!author.AddedToCurrentBook)
+                AddNewAuthor(author);
+                
+        }
+
+        private void AddNewAuthor(Author author)
+        {
+            AddAuthorToBook(author);
+            repo.Authors.Add(author);
+            author.AddedToCurrentBook = true;
+
         }
 
         private void DisplayPossibleMatches(IEnumerable<Author> possibleMatches, Author author)
@@ -87,7 +101,7 @@ namespace TinyLibrary
         private Author MakeAuthor()
         {
             return new Author
-            {
+            {                
                 FirstName = firstNamebox.Text,
                 LastName = lastNamebox.Text,
                 About = aboutbox.Text
