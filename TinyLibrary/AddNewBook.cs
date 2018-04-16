@@ -19,7 +19,6 @@ namespace TinyLibrary
         public AddNewBookForm()
         {
             InitializeComponent();
-            
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -33,7 +32,6 @@ namespace TinyLibrary
             {
                 Author author = (Author)obj;
                 author.AddedToCurrentBook = false;
-
             }
         }
 
@@ -106,6 +104,11 @@ namespace TinyLibrary
                 LastName = lastNamebox.Text,
                 About = aboutbox.Text
             };
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

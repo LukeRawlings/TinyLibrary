@@ -27,5 +27,11 @@ namespace TinyLibrary
             AddNewBookForm form = new AddNewBookForm();
             form.ShowDialog();
         }
+
+        private void addBorrowerButton_Click(object sender, EventArgs e)
+        {
+            AddBorrowerForm form = new AddBorrowerForm();
+            form.ShowDialog();
+        }
     }
 }
