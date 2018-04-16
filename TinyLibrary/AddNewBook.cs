@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TinyLibrary.Models;
 
@@ -28,11 +24,33 @@ namespace TinyLibrary
 
         private void submitButton_Click(object sender, EventArgs e)
         {
-            foreach(object obj in authorBox.Items)
+            if (book.BookAuthors.Count > 0)
             {
-                Author author = (Author)obj;
-                author.AddedToCurrentBook = false;
+                AddFieldsToBook(book);
+                repo.Books.Add(book);
+                ClearBookFields();
+                book = new Book();
             }
+            else
+            {
+                MessageBox.Show("Gotta add an author.");
+
+            }
+        }
+
+        private void ClearBookFields()
+        {
+            isbnTextBox.Clear();
+            titleTextBox.Clear();
+            countTextBox.Clear();
+            authorBox.Items.Clear();
+        }
+
+        private void AddFieldsToBook(Book book)
+        {
+            book.ISBN = isbnTextBox.Text;
+            book.Title = titleTextBox.Text;
+            book.Count = int.Parse(countTextBox.Text);
         }
 
         private void AddNewBook_Load(object sender, EventArgs e)
@@ -45,31 +63,32 @@ namespace TinyLibrary
             if (AuthorInputsAreValid())
             {
                 Author author = MakeAuthor();
-                CheckForExistingAuthor(author);
+                List<Author> matches = GetMatchingAuthors(author);
+                if (matches.Count == 0)
+                    AddAuthorToBook(author);
+                else
+                    DisplayPossibleMatchesForAuthor(matches, author);
             }
         }
 
-        private void CheckForExistingAuthor(Author author)
+        private List<Author> GetMatchingAuthors(Author author)
         {
-            var possibleMatches = repo.Authors.Where
-                (a => author.FirstName == a.FirstName 
+            var authors = repo
+                .Books
+                .SelectMany(b => b.BookAuthors)
+                .ToList();
+
+            authors.AddRange(book.BookAuthors);
+
+            var possibleMatches = authors.Where
+                (a => author.FirstName == a.FirstName
                 && author.LastName == a.LastName);
-            if (possibleMatches.ToList().Count > 0)
-                DisplayPossibleMatches(possibleMatches, author);
-             else if(!author.AddedToCurrentBook)
-                AddNewAuthor(author);
-                
+
+            return possibleMatches.ToList();
         }
 
-        private void AddNewAuthor(Author author)
-        {
-            AddAuthorToBook(author);
-            repo.Authors.Add(author);
-            author.AddedToCurrentBook = true;
 
-        }
-
-        private void DisplayPossibleMatches(IEnumerable<Author> possibleMatches, Author author)
+        private void DisplayPossibleMatchesForAuthor(IEnumerable<Author> possibleMatches, Author author)
         {
             MatchingAuthorsData data = new MatchingAuthorsData
             {
@@ -78,7 +97,7 @@ namespace TinyLibrary
                 Book = book,
                 InputtedAuthor = author
             };
-            
+
             MatchesForm form = new MatchesForm(data);
             form.ShowDialog();
         }
@@ -91,24 +110,21 @@ namespace TinyLibrary
 
         private bool AuthorInputsAreValid()
         {
-            return firstNamebox.Text.NotEmpty() 
-                    && lastNamebox.Text.NotEmpty() 
+            return firstNamebox.Text.NotEmpty()
+                    && lastNamebox.Text.NotEmpty()
                     && aboutbox.Text.NotEmpty();
         }
 
         private Author MakeAuthor()
         {
             return new Author
-            {                
+            {
                 FirstName = firstNamebox.Text,
                 LastName = lastNamebox.Text,
                 About = aboutbox.Text
             };
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
 
-        }
     }
 }
