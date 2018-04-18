@@ -31,8 +31,8 @@
             this.findBookButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.borrowerIdBox = new System.Windows.Forms.TextBox();
+            this.isbnBox = new System.Windows.Forms.TextBox();
             this.checkoutButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -58,34 +58,35 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 117);
+            this.label2.Location = new System.Drawing.Point(107, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "ISBN";
             // 
-            // textBox1
+            // borrowerIdBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(231, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 3;
+            this.borrowerIdBox.Location = new System.Drawing.Point(200, 40);
+            this.borrowerIdBox.Name = "borrowerIdBox";
+            this.borrowerIdBox.Size = new System.Drawing.Size(131, 26);
+            this.borrowerIdBox.TabIndex = 3;
             // 
-            // textBox2
+            // isbnBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(231, 117);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 4;
+            this.isbnBox.Location = new System.Drawing.Point(200, 117);
+            this.isbnBox.Name = "isbnBox";
+            this.isbnBox.Size = new System.Drawing.Size(131, 26);
+            this.isbnBox.TabIndex = 4;
             // 
             // checkoutButton
             // 
-            this.checkoutButton.Location = new System.Drawing.Point(137, 310);
+            this.checkoutButton.Location = new System.Drawing.Point(111, 310);
             this.checkoutButton.Name = "checkoutButton";
-            this.checkoutButton.Size = new System.Drawing.Size(116, 37);
+            this.checkoutButton.Size = new System.Drawing.Size(137, 55);
             this.checkoutButton.TabIndex = 5;
             this.checkoutButton.Text = "Checkout";
             this.checkoutButton.UseVisualStyleBackColor = true;
+            this.checkoutButton.Click += new System.EventHandler(this.checkoutButton_Click);
             // 
             // closeButton
             // 
@@ -95,6 +96,7 @@
             this.closeButton.TabIndex = 6;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // CheckoutBook
             // 
@@ -103,8 +105,8 @@
             this.ClientSize = new System.Drawing.Size(644, 410);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.checkoutButton);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.isbnBox);
+            this.Controls.Add(this.borrowerIdBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.findBookButton);
@@ -120,8 +122,8 @@
         private System.Windows.Forms.Button findBookButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox borrowerIdBox;
+        private System.Windows.Forms.TextBox isbnBox;
         private System.Windows.Forms.Button checkoutButton;
         private System.Windows.Forms.Button closeButton;
     }

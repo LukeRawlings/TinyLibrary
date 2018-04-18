@@ -22,3 +22,4 @@ C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrar
 C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.AddNewBookForm.resources
 C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.MatchesForm.resources
 C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.AddBorrowerForm.resources
+C:\Users\Luke Rawlings\source\repos\TinyLibrary\TinyLibrary\obj\Debug\TinyLibrary.CheckoutBook.resources

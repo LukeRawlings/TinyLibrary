@@ -33,5 +33,11 @@ namespace TinyLibrary
             AddBorrowerForm form = new AddBorrowerForm();
             form.ShowDialog();
         }
+
+        private void checkoutButton_Click(object sender, EventArgs e)
+        {
+            CheckoutBook form = new CheckoutBook();
+            form.ShowDialog();
+        }
     }
 }

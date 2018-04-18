@@ -16,6 +16,8 @@ namespace TinyLibrary.Models
         }
 
 
+        
+
         public void AddAuthors()
         {
             for (int i = 10; i <= 20; i++)
@@ -55,6 +57,44 @@ namespace TinyLibrary.Models
                 Location = "B20",
                 Count = 10
             };
+        }
+
+        public void AddBooksToBorrower()
+        {
+            Book myBook3 = new Book
+            {
+                ISBN = "123457899999",
+                Title = "book3",
+                BookAuthors = new List<Author>
+                {
+                    authors.First()
+                },
+                Location = "B20",
+                Count = 10
+            };
+
+            Book myBook4 = new Book
+            {
+                ISBN = "123457899999",
+                Title = "book4",
+                BookAuthors = new List<Author>
+                {
+                    authors.First()
+                },
+                Location = "B20",
+                Count = 10
+            };
+
+            Borrower borrower = new Borrower
+            {
+                Id = 1,
+                FirstName = "John",
+                LastName = "Doe",
+                BorrowerType = "Student"
+            };
+            borrower.BorrowedBooks.Add(myBook3);
+            borrower.BorrowedBooks.Add(myBook4);
+
         }
     }
 }

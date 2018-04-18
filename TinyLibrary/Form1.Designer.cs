@@ -72,6 +72,7 @@
             this.checkoutButton.TabIndex = 3;
             this.checkoutButton.Text = "Check out book";
             this.checkoutButton.UseVisualStyleBackColor = true;
+            this.checkoutButton.Click += new System.EventHandler(this.checkoutButton_Click);
             // 
             // Form1
             // 

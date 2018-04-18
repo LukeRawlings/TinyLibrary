@@ -12,11 +12,18 @@ namespace TinyLibrary.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string BorrowerType { get; set; }
-        public List<Book> BorrowedBooks { get; set; }
+        public List<Book> BorrowedBooks { get; set; } = new List<Book>();
 
         public override string ToString()
         {
-            return Id + " - " + FirstName + " " + LastName + " - " + BorrowerType;
+            string str = "";
+            str += Id + " - " + FirstName + " " + LastName + " - " + BorrowerType + ": ";
+            foreach(Book b in BorrowedBooks)
+            {
+                str += b + " ";
+            };
+
+            return str;
         }
     }
 }

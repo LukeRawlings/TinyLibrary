@@ -13,5 +13,6 @@ namespace TinyLibrary.Models
         public List<Author> BookAuthors { get; set; } = new List<Author>();
         public string Location { get; set; }
         public int Count { get; set; }
+        public int NumAvailable { get; set; }
     }
 }
