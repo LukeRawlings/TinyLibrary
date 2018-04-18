@@ -31,6 +31,7 @@
             this.closeButton = new System.Windows.Forms.Button();
             this.addBookButton = new System.Windows.Forms.Button();
             this.addBorrowerButton = new System.Windows.Forms.Button();
+            this.checkoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // closeButton
@@ -57,17 +58,27 @@
             // 
             this.addBorrowerButton.Location = new System.Drawing.Point(58, 289);
             this.addBorrowerButton.Name = "addBorrowerButton";
-            this.addBorrowerButton.Size = new System.Drawing.Size(115, 63);
+            this.addBorrowerButton.Size = new System.Drawing.Size(115, 64);
             this.addBorrowerButton.TabIndex = 2;
             this.addBorrowerButton.Text = "Add Borrower";
             this.addBorrowerButton.UseVisualStyleBackColor = true;
             this.addBorrowerButton.Click += new System.EventHandler(this.addBorrowerButton_Click);
+            // 
+            // checkoutButton
+            // 
+            this.checkoutButton.Location = new System.Drawing.Point(58, 173);
+            this.checkoutButton.Name = "checkoutButton";
+            this.checkoutButton.Size = new System.Drawing.Size(115, 64);
+            this.checkoutButton.TabIndex = 3;
+            this.checkoutButton.Text = "Check out book";
+            this.checkoutButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 517);
+            this.Controls.Add(this.checkoutButton);
             this.Controls.Add(this.addBorrowerButton);
             this.Controls.Add(this.addBookButton);
             this.Controls.Add(this.closeButton);
@@ -82,6 +93,7 @@
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button addBookButton;
         private System.Windows.Forms.Button addBorrowerButton;
+        private System.Windows.Forms.Button checkoutButton;
     }
 }
 

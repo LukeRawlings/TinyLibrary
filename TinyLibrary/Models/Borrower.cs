@@ -12,6 +12,7 @@ namespace TinyLibrary.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string BorrowerType { get; set; }
+        public List<Book> BorrowedBooks { get; set; }
 
         public override string ToString()
         {
