@@ -14,5 +14,6 @@ namespace TinyLibrary.Models
         public string Location { get; set; }
         public int Count { get; set; }
         public int NumAvailable { get; set; }
+        public int Year { get; set; }
     }
 }

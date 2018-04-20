@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace TinyLibrary.Models
 {
-    class ModelRepository
+    public class ModelRepository
     {
         public List<Book> Books { get; set; } = new List<Book>();
         private List<Author> authors = new List<Author>();

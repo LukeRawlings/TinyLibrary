@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TinyLibrary.Models
 {
-    class Borrower
+    public class Borrower
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

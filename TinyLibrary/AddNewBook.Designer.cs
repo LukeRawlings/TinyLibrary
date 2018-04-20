@@ -47,13 +47,17 @@
             this.AddToBookbutton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.authorBox = new System.Windows.Forms.ListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.yearBox = new System.Windows.Forms.TextBox();
+            this.locationBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(474, 411);
+            this.closeButton.Location = new System.Drawing.Point(464, 573);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(124, 55);
             this.closeButton.TabIndex = 0;
@@ -82,7 +86,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 242);
+            this.label3.Location = new System.Drawing.Point(38, 352);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 3;
@@ -120,7 +124,7 @@
             // 
             // saveBookButton
             // 
-            this.saveBookButton.Location = new System.Drawing.Point(214, 411);
+            this.saveBookButton.Location = new System.Drawing.Point(204, 573);
             this.saveBookButton.Name = "saveBookButton";
             this.saveBookButton.Size = new System.Drawing.Size(142, 55);
             this.saveBookButton.TabIndex = 10;
@@ -190,7 +194,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(434, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(358, 352);
+            this.groupBox1.Size = new System.Drawing.Size(358, 490);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Authors";
@@ -207,6 +211,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.locationBox);
+            this.groupBox2.Controls.Add(this.yearBox);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.authorBox);
             this.groupBox2.Controls.Add(this.isbnTextBox);
             this.groupBox2.Controls.Add(this.ISBN);
@@ -217,7 +225,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(28, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(382, 363);
+            this.groupBox2.Size = new System.Drawing.Size(382, 500);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Book";
@@ -226,16 +234,48 @@
             // 
             this.authorBox.FormattingEnabled = true;
             this.authorBox.ItemHeight = 20;
-            this.authorBox.Location = new System.Drawing.Point(134, 242);
+            this.authorBox.Location = new System.Drawing.Point(134, 352);
             this.authorBox.Name = "authorBox";
             this.authorBox.Size = new System.Drawing.Size(229, 104);
             this.authorBox.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 239);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Location";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(47, 295);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 20);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Year";
+            // 
+            // yearBox
+            // 
+            this.yearBox.Location = new System.Drawing.Point(134, 292);
+            this.yearBox.Name = "yearBox";
+            this.yearBox.Size = new System.Drawing.Size(194, 26);
+            this.yearBox.TabIndex = 12;
+            // 
+            // locationBox
+            // 
+            this.locationBox.Location = new System.Drawing.Point(134, 233);
+            this.locationBox.Name = "locationBox";
+            this.locationBox.Size = new System.Drawing.Size(194, 26);
+            this.locationBox.TabIndex = 13;
             // 
             // AddNewBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 495);
+            this.ClientSize = new System.Drawing.Size(820, 663);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.saveBookButton);
@@ -272,5 +312,9 @@
         private System.Windows.Forms.Button AddToBookbutton;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox authorBox;
+        private System.Windows.Forms.TextBox locationBox;
+        private System.Windows.Forms.TextBox yearBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -12,7 +12,7 @@ namespace TinyLibrary
         ModelRepository repo = new ModelRepository();
         Book book = new Book();
 
-        public AddNewBookForm()
+        public AddNewBookForm(ModelRepository repo)
         {
             InitializeComponent();
         }
@@ -44,12 +44,16 @@ namespace TinyLibrary
             titleTextBox.Clear();
             countTextBox.Clear();
             authorBox.Items.Clear();
+            locationBox.Clear();
+            yearBox.Clear();
         }
 
         private void AddFieldsToBook(Book book)
         {
             book.ISBN = isbnTextBox.Text;
             book.Title = titleTextBox.Text;
+            book.Location = locationBox.Text;
+            book.Year = int.Parse(yearBox.Text);
             book.Count = int.Parse(countTextBox.Text);
         }
 

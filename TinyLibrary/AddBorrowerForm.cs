@@ -18,7 +18,7 @@ namespace TinyLibrary
 
         List<BorrowerType> possibleBorrowerTypes = new List<BorrowerType>();
 
-        public AddBorrowerForm()
+        public AddBorrowerForm(ModelRepository repo)
         {
             AddBorrowerType();
             InitializeComponent();
